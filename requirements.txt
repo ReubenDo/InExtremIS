@@ -1,0 +1,8 @@
+monai==0.4.0
+nibabel==3.1.1
+torch==1.7.1
+dijkstra3d==1.8.0
+pandas
+medpy
+tqdm
+natsort
