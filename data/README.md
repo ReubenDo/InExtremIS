@@ -7,9 +7,9 @@ This readme explains how to download and pre-process the raw data from TCIA. We 
 
 ## Download the fully annotated TCIA-VS dataset
 
-### Option 1 - Downloading T2 only and segmentation maps (Recommended):
+### Option 1 - Downloading the T2 scans only and their segmentation maps (Recommended):
 
-To download the dataset, please follow the following steps:
+Please follow the following steps:
 
 **Step 1**: Download the NBIA Data Retriever
 Please follow the instructions [here](https://wiki.cancerimagingarchive.net/display/NBIA/Downloading+TCIA+Images).
