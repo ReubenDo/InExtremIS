@@ -3,7 +3,7 @@
 In this work, we used a large (N=242) dataset for Vestibular Schwannoma segmentation. This dataset is publicly available on 
 [TCIA](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70229053). 
 
-This readme explains how to download and pre-processed the raw data from TCIA. Additionally, we provide the extreme points and pre-computed geodesics used in our work.
+This readme explains how to download and pre-process the raw data from TCIA. We also provide an open access to the extreme points and pre-computed geodesics used in this work.
 
 Our code is based on the [VS_Seg](https://github.com/KCL-BMEIS/VS_Seg) repository.
 
