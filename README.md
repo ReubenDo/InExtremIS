@@ -1,6 +1,6 @@
 #  Inter Extreme Points Geodesics for End-to-End Weakly Supervised Image Segmentation
 
-Public pytorch implementation for our paper Inter Extreme Points Geodesics for End-to-End Weakly Supervised Image Segmentation, 
+Public pytorch implementation for our paper [Inter Extreme Points Geodesics for End-to-End Weakly Supervised Image Segmentation](https://arxiv.org/abs/2107.00583), 
 which was accepted for presentation at [MICCAI 2021](https://www.miccai2021.org). 
 
 If you find this code useful for your research, please cite the following paper:
