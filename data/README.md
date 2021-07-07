@@ -17,7 +17,7 @@ To download the dataset, please follow the following steps:
 * *Option 1*: Download the complete TCIA dataset [here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70229053):
   * Images and Radiation Therapy Structures (DICOM, 26 GB) in "Descriptive Directory Name" format.
 * *Option 2*: Download only the T2 scans only:
-  * Open `manifest-T2.tcia` with NBIA Data Retriever and download the T2 images (DICOM, 6GB).
+  * Open `manifest-T2.tcia` with NBIA Data Retriever and download the T2 images (DICOM, 6GB) "Descriptive Directory Name" format.
 
 **Step 3**:  Download the contours (JSON, zip, 16 MB) [here](https://wiki.cancerimagingarchive.net/download/attachments/70229053/Vestibular-Schwannoma-SEG%20contours%20Mar%202021.zip?api=v2).
 
