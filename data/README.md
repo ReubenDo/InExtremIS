@@ -14,9 +14,9 @@ To download the dataset, please follow the following steps:
 **Step 1**: Download the NBIA Data Retriever [here](https://wiki.cancerimagingarchive.net/display/NBIA/Downloading+TCIA+Images).
 
 **Step 2**: Download the imaging data:
-* *Option 1*: Download the complete TCIA dataset [here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70229053):
+* *Option 1*: Download the full TCIA dataset [here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70229053):
   * Images and Radiation Therapy Structures (DICOM, 26 GB) in "Descriptive Directory Name" format.
-* *Option 2*: Download only the T2 scans only:
+* *Option 2*: Download the T2 scans only:
   * Open `manifest-T2.tcia` with NBIA Data Retriever and download the T2 images (DICOM, 6GB) "Descriptive Directory Name" format.
 
 **Step 3**:  Download the contours (JSON, zip, 16 MB) [here](https://wiki.cancerimagingarchive.net/download/attachments/70229053/Vestibular-Schwannoma-SEG%20contours%20Mar%202021.zip?api=v2).
@@ -29,10 +29,8 @@ To download the dataset, please follow the following steps:
     * `<output_folder>` is the directory in which the pre-processed data will be saved
 
 ## Download the extreme points and pre-computed geodesics
-
-We provide the manual and simulated extreme points (not available yet). 
-
-We additionally provide the pre-computed geodesics using the gradient information (`grad` folder) and with the additional Euclidean distance (`grad_eucl`) (not available yet)
+The manual and simulated extreme points can be found here (not available yet). 
+The pre-computed geodesics using the gradient information (`grad` folder) and with the additional Euclidean distance (`grad_eucl`) can be found here (not available yet)
 
 ## Citations
 If you use this VS data, please cite:
