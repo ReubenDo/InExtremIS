@@ -44,7 +44,7 @@ python3 setup.py install --user
 
 ## Data
 
-The dataset (images, annotations, exteme points) used for our experiments will be released soon.
+The data and annotations are publicly available. Details are provided in [data](/data/).
 
 ## Running the code
 `train.py` is the main file for training the models.
