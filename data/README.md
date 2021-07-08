@@ -11,27 +11,27 @@ This readme explains how to download and pre-process the raw data from TCIA. We 
 
 Please follow the following steps:
 
-**Step 1**: Download the NBIA Data Retriever
-Please follow the instructions [here](https://wiki.cancerimagingarchive.net/display/NBIA/Downloading+TCIA+Images).
+**Step 1**: Download the NBIA Data Retriever: 
+* Please follow the instructions [here](https://wiki.cancerimagingarchive.net/display/NBIA/Downloading+TCIA+Images).
 
-**Step 2**: Download the T2 scans only
-Open `manifest-T2.tcia` with NBIA Data Retriever and download the T2 images (DICOM, 6GB) with the "Descriptive Directory Name" format.
+**Step 2**: Download the T2 scans only:
+* Open `manifest-T2.tcia` with NBIA Data Retriever and download the T2 images (DICOM, 6GB) with the "Descriptive Directory Name" format.
 
-**Step 3**: DICOM to Nifti conversion
+**Step 3**: DICOM to Nifti conversion:
 * Install dependencies: `pip install -r preprocess_requirements.txt`
 * Execute the conversion script: 
 `python3 convert.py --input <input_folder> --output <output_folder>`
   * `<input_folder>` is the directory containing the raw T2 images (e.g. `/home/admin/manifest-T2/Vestibular-Schwannoma-SEG/`).
   * `<output_folder>` is the directory in which the pre-processed data will be saved.
 
-**Step 4**:  Download the fully annotated segmentation masks [here](https://zenodo.org/record/5081163#.YOY2CHVKiEI).
+**Step 4**:  Download the fully annotated segmentation masks [here](https://zenodo.org/record/5081986/files/full_annotations.zip?download=1).
 
-### Option 2 - Downloading the full dataset and convert contours into segmentation masks:
+### Option 2 - Downloading the full dataset and manually convert contours into segmentation masks:
 Please follow the instructions from the [VS_Seg repository](https://github.com/KCL-BMEIS/VS_Seg/tree/master/preprocessing).
 
 ## Download the extreme points and pre-computed geodesics
-The manual and simulated extreme points can be found [here](https://zenodo.org/record/5081163#.YOY2CHVKiEI). 
-The pre-computed geodesics using the image gradient information (`grad` folder) and with the additional Euclidean distance (`grad_eucl`) can be found [here](https://zenodo.org/record/5081163#.YOY2CHVKiEI).
+The manual and simulated extreme points can be found [here](https://zenodo.org/record/5081986/files/extreme_points.zip?download=1). 
+The pre-computed geodesics using the image gradient information (`grad` folder) and with the additional Euclidean distance (`grad_eucl` folder) can be found [here](https://zenodo.org/record/5081986/files/precomputed_geodesics.zip?download=1).
 
 ## Citations
 If you use this VS data, please cite:
