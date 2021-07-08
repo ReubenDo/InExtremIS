@@ -59,7 +59,8 @@ python3 train.py \
 --mode extreme_points \
 --label_postfix Extremes_man \
 --img_gradient_postfix Sobel_man \
---path_labels data/extremes_manual/ \
+--path_data data/T2/ \
+--path_labels data/extreme_points/manual/ \
 --with_euclidean \
 --with_prob
 ````
@@ -73,7 +74,8 @@ python3 train.py \
 --mode extreme_points \
 --label_postfix Extremes \
 --img_gradient_postfix Sobel \
---path_labels data/T2/ \
+--path_data data/T2/ \
+--path_labels data/extreme_points/simulated/ \
 --with_euclidean \
 --with_prob
 ````
@@ -81,7 +83,8 @@ python3 train.py \
 `inference.py` is the main file for run the inference:
 ````
 python3 inference.py \
---model_dir ./models/manual_gradient_eucl_deep_crf/ 
+--model_dir ./models/manual_gradient_eucl_deep_crf/ \
+--path_data data/T2/ \
 ````
  
 ## Using the code with your own data
