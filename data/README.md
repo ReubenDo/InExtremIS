@@ -36,7 +36,20 @@ The pre-computed geodesics using the image gradient information (`grad` folder) 
 ## Citations
 If you use this VS data, please cite:
 
-Shapey, J., Wang, G., Dorent, R., Dimitriadis, A., Li, W., Paddick, I., Kitchen, N., Bisdas, S., Saeed, S. R., Ourselin, S., Bradford, R., & Vercauteren, T. (2021). An artificial intelligence framework for automatic segmentation and volumetry of vestibular schwannomas from contrast-enhanced T1-weighted and high-resolution T2-weighted MRI. Journal of Neurosurgery, 134(1), 171–179. https://doi.org/10.3171/2019.9.jns191949
+```
+@article { ShapeyJNS21,
+      author = "Jonathan Shapey and Guotai Wang and Reuben Dorent and Alexis Dimitriadis and Wenqi Li and Ian Paddick and Neil Kitchen and Sotirios Bisdas and Shakeel R. Saeed and Sebastien Ourselin and Robert Bradford and Tom Vercauteren",
+      title = "{An artificial intelligence framework for automatic segmentation and volumetry of vestibular schwannomas from contrast-enhanced T1-weighted and high-resolution T2-weighted MRI}",
+      journal = "Journal of Neurosurgery JNS",
+      year = "2021",
+      publisher = "American Association of Neurological Surgeons",
+      volume = "134",
+      number = "1",
+      doi = "10.3171/2019.9.JNS191949",
+      pages= "171 - 179",
+      url = "https://thejns.org/view/journals/j-neurosurg/134/1/article-p171.xml"
+}
+```
 
 If you use the extreme points, please additionally cite:
 
