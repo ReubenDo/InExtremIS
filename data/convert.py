@@ -7,13 +7,13 @@ import os
 from glob import glob
 from natsort import natsorted
 import pydicom
-import dicom2nifti
+import SimpleITK as sitk
 import re
 import argparse
 from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description='Convert the T2 scans from the TCIA dataset into the Nifti format')
-parser.add_argument('--input', type=str, help='(string) path to TCIA dataset, in "Descriptive Directory Name" format, for example /home/user/.../manifest-1614264588831/Vestibular-Schwannoma-SEG')
+parser.add_argument('--input', type=str, help='(string) path to TCIA dataset, in "Descriptive Directory Name" format, for example /home/user/.../manifest-T2/Vestibular-Schwannoma-SEG')
 parser.add_argument('--output', type=str, help='(string) path to output folder')
 args = parser.parse_args()
 
@@ -31,6 +31,7 @@ for case in tqdm(cases):
     MRs = [] 
     MRs_paths = []
     
+    # Test that the DICOM is a MRI
     for folder in folders:
         first_file = glob(folder+"/*")[0]
         dd = pydicom.read_file(first_file)
@@ -38,14 +39,15 @@ for case in tqdm(cases):
         if dd['Modality'].value == 'MR':
             MRs.append(dd)
             MRs_paths.append(first_file)
-            
-    found = False
+        
+        else:
+            raise Exception
+           
     file_paths = None
-    # sort for T2
+    # Test that the DICOM is a T2 scan
     for MR, path in zip(MRs, MRs_paths):
         if "t2_" in MR['SeriesDescription'].value:
             MR_T2 = MR
-            found = True
             file_paths = path
         else:
             raise Exception
@@ -53,10 +55,16 @@ for case in tqdm(cases):
     # write files into new folder structure
     p = re.compile(r'VS-SEG-(\d+)')
     case_idx = int(p.findall(case)[0])
+    old_T2_folder = os.path.dirname(file_paths)
 
+    # Output path
     new_T2_path = os.path.join(output_path, 'vs_gk_' + str(case_idx) +'_T2.nii.gz')
     
-    old_T2_folder = os.path.dirname(file_paths)
-    
-    dicom2nifti.dicom_series_to_nifti(old_T2_folder, new_T2_path, reorient_nifti=False)
+    # Conversion DICOM to NIFTI using SITK
+    reader = sitk.ImageSeriesReader()
+    dicom_names = reader.GetGDCMSeriesFileNames(old_T2_folder)
+    reader.SetFileNames(dicom_names)
+    image = reader.Execute()
+
+    sitk.WriteImage(image, new_T2_path)
         

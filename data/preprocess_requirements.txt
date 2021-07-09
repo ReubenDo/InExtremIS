@@ -1,4 +1,4 @@
-dicom2nifti
+SimpleITK
 pydicom
 tqdm
 natsort
