@@ -33,6 +33,8 @@ Please follow the instructions from the [VS_Seg repository](https://github.com/K
 The manual and simulated extreme points can be found [here](https://zenodo.org/record/5081986/files/extreme_points.zip?download=1). 
 The pre-computed geodesics using the image gradient information (`grad` folder) and with the additional Euclidean distance (`grad_eucl` folder) can be found [here](https://zenodo.org/record/5081986/files/precomputed_geodesics.zip?download=1).
 
+The 6 extreme points are the voxels with the values _1,2,3,4,5,6_. Specifically, the pairs of extreme points in the _x_, _y_ and _z_ axis are respectively _{1,2}_, _{3,4}_ and _{5,6}_.
+
 ## Citations
 If you use this VS data, please cite:
 
